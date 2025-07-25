@@ -1,0 +1,32 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+.main {
+  flex: 1;
+  padding: 2rem;
+  margin-left: 0;
+  transition: margin-left 0.3s ease;
+  background: rgb(245, 245, 245);
+  min-height: calc(100vh - 64px);
+}
+
+@media (min-width: 768px) {
+  .main {
+    margin-left: 250px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main {
+    padding: 1rem;
+  }
+}

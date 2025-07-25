@@ -1,0 +1,85 @@
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(229, 231, 235);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.cardInfo {
+  flex: 1;
+}
+
+.cardTitle {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgb(107, 114, 128);
+  margin-bottom: 0.5rem;
+}
+
+.cardValue {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(27, 39, 62);
+  line-height: 1;
+}
+
+.cardIcon {
+  font-size: 2rem;
+  opacity: 0.8;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.change {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.change.positive {
+  color: rgb(76, 175, 80);
+}
+
+.change.negative {
+  color: rgb(244, 67, 54);
+}
+
+.change.neutral {
+  color: rgb(0, 255, 255);
+}
+
+.changeLabel {
+  font-size: 0.75rem;
+  color: rgb(107, 114, 128);
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1rem;
+  }
+
+  .cardValue {
+    font-size: 1.5rem;
+  }
+
+  .cardIcon {
+    font-size: 1.5rem;
+  }
+}

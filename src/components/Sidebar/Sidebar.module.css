@@ -1,0 +1,104 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+.sidebar {
+  position: fixed;
+  top: 64px;
+  left: -250px;
+  width: 250px;
+  height: calc(100vh - 64px);
+  background: rgb(27, 39, 62);
+  transition: left 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.nav {
+  padding: 1rem 0;
+}
+
+.menuList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: all 0.2s;
+  border-left: 3px solid transparent;
+}
+
+.menuItem:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.menuItem.active {
+  background: rgba(0, 255, 255, 0.1);
+  color: rgb(0, 255, 255);
+  border-left-color: rgb(0, 255, 255);
+}
+
+.menuIcon {
+  font-size: 1.25rem;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.menuText {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.collapseButton {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  margin: 0.5rem 0.5rem 1rem 0.5rem;
+  color: #1b273e;
+  display: block;
+}
+.sidebar.collapsed {
+  width: 60px;
+  min-width: 60px;
+}
+.sidebar.collapsed .menuText {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .overlay {
+    display: none !important;
+  }
+
+  .sidebar {
+    left: 0;
+    position: fixed;
+  }
+}
+
+@media (max-width: 767px) {
+  .overlay {
+    display: block;
+  }
+}

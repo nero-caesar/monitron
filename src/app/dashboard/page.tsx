@@ -42,7 +42,7 @@ export default function DashboardPage() {
     <div className={styles.dashboard}>
       <div className={styles.header}>
         <h1 className={styles.title}>Welcome back, {adminName}!</h1>
-        <p className={styles.subtitle}>Here's what's happening with your company today.</p>
+        <p className={styles.subtitle}>Here is what is happening with your company today.</p>
       </div>
 
       <div className={styles.statsGrid}>

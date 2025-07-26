@@ -26,6 +26,11 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       icon: "💻",
     },
     {
+      name: "Register",
+      href: "/dashboard/register",
+      icon: "📱",
+    },
+    {
       name: "Staff Activity",
       href: "/dashboard/staff",
       icon: "👥",
